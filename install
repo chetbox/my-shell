@@ -1,0 +1,27 @@
+#!/bin/bash
+
+set -e
+
+CURRENT_DIR=$(cd $(dirname $0) ; pwd)
+PROFILE="$CURRENT_DIR/profile"
+
+# Download git-aware-prompt
+mkdir -p "$HOME/.bash"
+if [ ! -e "$HOME/.bash/git-aware-prompt" ] ; then
+    git clone "https://github.com/jimeh/git-aware-prompt.git" "$HOME/.bash/git-aware-prompt"
+fi
+(cd "$HOME/.bash/git-aware-prompt" && git pull)
+
+# Backup old ~/.profile
+if [ -e "$HOME/.profile" ] || [ -L "$HOME/.profile" ] ; then
+    echo "Backing up ~/.profile"
+    mv "$HOME/.profile" "$HOME/.profile.$(date '+%Y-%m-%d-%H:%M:%S').backup"
+fi
+
+echo "Installing ~/.profile"
+ln -s "$PROFILE" "$HOME/.profile"
+
+echo "Success!"
+
+echo ""
+echo "Run \"source ~/.profile\" to use your new shell profile"
