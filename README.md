@@ -1,4 +1,4 @@
-# My bash `.profile`
+# My shell environment
 
 Useful for getting new machines set up the way I like.
 
