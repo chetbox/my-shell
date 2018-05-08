@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -e
+
+CURRENT_DIR=$(cd $(dirname $0) ; pwd)
+INPUTRC="$CURRENT_DIR/inputrc"
+
+if [ -e "$HOME/.inputrc" ] || [ -L "$HOME/.inputrc" ] ; then
+    echo "Backing up ~/.inputrc"
+    mv "$HOME/.inputrc" "$HOME/.inputrc.$(date '+%Y-%m-%d-%H:%M:%S').backup"
+fi
+
+echo "Installing ~/.inputrc"
+ln -s "$INPUTRC" "$HOME/.inputrc"

@@ -6,6 +6,7 @@ CURRENT_DIR=$(cd $(dirname $0) ; pwd)
 SCRIPTS=(
     setup-git
     setup-profile
+    setup-inputrc
     setup-homebrew
 )
 
