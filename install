@@ -6,11 +6,12 @@ CURRENT_DIR=$(cd $(dirname $0) ; pwd)
 SCRIPTS=(
     setup-git
     setup-profile
+    setup-homebrew
 )
 
 for SCRIPT in "${SCRIPTS[@]}" ; do
     echo "$SCRIPT"
-    "$CURRENT_DIR/$SCRIPT" | sed 's/^/  /'
+    "$CURRENT_DIR/$SCRIPT" 2>&1 | sed 's/^/  /'
 done
 
 echo "Done."
