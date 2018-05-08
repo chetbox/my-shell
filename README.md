@@ -4,7 +4,7 @@ Useful for getting new machines set up the way I like.
 
 ## Requirements
 
-- Only test on macOS
+- macOS
 - A working internet connection
 
 ## Installation
