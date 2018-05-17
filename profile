@@ -31,3 +31,7 @@ HISTCONTROL="erasedups:ignoreboth"
 
 # Useful timestamp format
 HISTTIMEFORMAT='%F %T '
+
+# Android SDK
+ANDROID_HOME="$HOME/Library/Android/sdk"
+PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
