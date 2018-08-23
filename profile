@@ -9,6 +9,9 @@ export CLICOLOR=
 # Colour grep
 export GREP_OPTIONS="--color=auto"
 
+# Default editor
+export EDITOR=micro
+
 # Homebrew bash completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
