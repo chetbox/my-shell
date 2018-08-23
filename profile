@@ -35,3 +35,6 @@ HISTTIMEFORMAT='%F %T '
 # Android SDK
 ANDROID_HOME="$HOME/Library/Android/sdk"
 PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
+
+# Use Java 8
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home
