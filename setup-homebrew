@@ -6,7 +6,7 @@ PACKAGES=(
     git
     bash-completion
     tree
-	micro
+    micro
 )
 
 if [ -z "$(which brew)" ] ; then
