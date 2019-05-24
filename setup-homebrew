@@ -4,14 +4,14 @@ set -e
 
 PACKAGES=(
     git
-    vim
+    bash-completion
     tree
 	micro
 )
 
 if [ -z "$(which brew)" ] ; then
     echo "Installing Homebrew"
-    # From https://brew.sh 
+    # From https://brew.sh
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
