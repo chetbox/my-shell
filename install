@@ -17,9 +17,7 @@ echo "Install zsh + oh-my-zsh"
 if [ -z "$(which zsh)" ] ; then
   pkg install zsh | sed 's/^/  /'
 fi
-if [ -z "$HOME/.oh-my-zsh" ] ; then
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" | sed 's/^/  /'
-fi
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" | sed 's/^/  /'
 
 echo "Installing symlinks"
 "$CURRENT_DIR/install-symlink" "$CURRENT_DIR/inputrc" "$HOME/.inputrc" | sed 's/^/  /'
