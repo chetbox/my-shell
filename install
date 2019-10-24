@@ -4,10 +4,8 @@ set -e
 
 CURRENT_DIR=$(cd $(dirname $0) ; pwd)
 SCRIPTS=(
-    setup-git
-    setup-profile
-    setup-inputrc
     setup-homebrew
+    setup-git
 )
 
 for SCRIPT in "${SCRIPTS[@]}" ; do
@@ -15,7 +13,20 @@ for SCRIPT in "${SCRIPTS[@]}" ; do
     "$CURRENT_DIR/$SCRIPT" 2>&1 | sed 's/^/  /'
 done
 
+echo "Install zsh + oh-my-zsh"
+if [ -z "$(which zsh)" ] ; then
+  pkg install zsh | sed 's/^/  /'
+fi
+if [ -z "$HOME/.oh-my-zsh" ] ; then
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" | sed 's/^/  /'
+fi
+
+echo "Installing symlinks"
+"$CURRENT_DIR/install-symlink" "$CURRENT_DIR/inputrc" "$HOME/.inputrc" | sed 's/^/  /'
+"$CURRENT_DIR/install-symlink" "$CURRENT_DIR/profile" "$HOME/.profile" | sed 's/^/  /'
+"$CURRENT_DIR/install-symlink" "$CURRENT_DIR/zshrc" "$HOME/.zshrc" | sed 's/^/  /'
+
 echo "Done."
 
 echo ""
-echo "Run \"source ~/.profile\" to use your new shell profile"
+echo "Login again to use your new shell profile"

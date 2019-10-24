@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+CURRENT_DIR=$(cd $(dirname $0) ; pwd)
+SRC_FILE="$1"
+TARGET_FILE="$2"
+
+if [ -e "$TARGET_FILE" ] || [ -L "$TARGET_FILE" ] ; then
+    echo "Backing up ~/.inputrc"
+    mv "$TARGET_FILE" "$TARGET_FILE.$(date '+%Y-%m-%d-%H:%M:%S').backup"
+fi
+
+echo "$SRC_FILE -> $TARGET_FILE"
+ln -s "$SRC_FILE" "$TARGET_FILE"
