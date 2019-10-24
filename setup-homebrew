@@ -8,13 +8,17 @@ PACKAGES=(
     micro
 )
 
-if [ -z "$(which brew)" ] ; then
-    echo "Installing Homebrew"
-    # From https://brew.sh
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
+if [[ "$OSTYPE" == "darwin"* ]] ; then
 
-for PACKAGE in "${PACKAGES[@]}" ; do
-    echo "Installing $PACKAGE"
-    brew install "$PACKAGE" 2>&1 | sed 's/^/  /'
-done
+    if [ -z "$(which brew)" ] ; then
+        echo "Installing Homebrew"
+        # From https://brew.sh
+        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    fi
+
+    for PACKAGE in "${PACKAGES[@]}" ; do
+        echo "Installing $PACKAGE"
+        brew install "$PACKAGE" 2>&1 | sed 's/^/  /'
+    done
+
+fi
