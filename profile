@@ -1,5 +1,5 @@
 # Colour grep
-export GREP_OPTIONS="--color=auto"
+alias grep="grep --color=auto"
 
 # Default editor
 export EDITOR=micro
