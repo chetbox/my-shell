@@ -1,6 +1,9 @@
 # Colour grep
 alias grep="grep --color=auto"
 
+# exa instead of ls
+alias ls=exa
+
 # Default editor
 export EDITOR=micro
 
