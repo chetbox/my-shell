@@ -7,7 +7,7 @@ SRC_FILE="$1"
 TARGET_FILE="$2"
 
 if [ -e "$TARGET_FILE" ] || [ -L "$TARGET_FILE" ] ; then
-    echo "Backing up ~/.inputrc"
+    echo "Backing up $TARGET_FILE"
     mv "$TARGET_FILE" "$TARGET_FILE.$(date '+%Y-%m-%d-%H:%M:%S').backup"
 fi
 
