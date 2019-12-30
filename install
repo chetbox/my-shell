@@ -13,11 +13,14 @@ for SCRIPT in "${SCRIPTS[@]}" ; do
     "$CURRENT_DIR/$SCRIPT" 2>&1 | sed 's/^/  /'
 done
 
-echo "Install zsh + oh-my-zsh"
+echo "Installing zsh + oh-my-zsh"
 if [ -z "$(which zsh)" ] ; then
   pkg install zsh starship | sed 's/^/  /'
 fi
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" | sed 's/^/  /'
+
+echo "Fetching Z"
+curl -o ~/.z.sh "https://raw.githubusercontent.com/rupa/z/master/z.sh"
 
 echo "Installing symlinks"
 "$CURRENT_DIR/install-symlink" "$CURRENT_DIR/inputrc" "$HOME/.inputrc" | sed 's/^/  /'
