@@ -33,3 +33,12 @@ export PATH=$PATH:~/go/bin
 
 # MySQL
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+
+if [ -x "$(which termux-info)" ] ; then
+  # Run SSH agent for key managment
+  eval $(ssh-agent)
+
+  # Start SSH server
+  sshd
+fi
+
