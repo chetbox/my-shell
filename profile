@@ -34,6 +34,9 @@ export PATH=$PATH:~/go/bin
 # MySQL
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 
+# Rust
+export PATH=$PATH:~/.cargo/bin
+
 if [ -x "$(which termux-info)" ] ; then
   # Run SSH agent for key managment
   eval $(ssh-agent)
@@ -41,4 +44,3 @@ if [ -x "$(which termux-info)" ] ; then
   # Start SSH server
   sshd
 fi
-
