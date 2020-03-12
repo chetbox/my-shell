@@ -103,3 +103,8 @@ alias ohmyzsh="micro ~/.oh-my-zsh"
 
 source ~/.profile
 source ~/.z.sh
+
+# direnv
+eval "$(direnv hook zsh)"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
