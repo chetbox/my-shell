@@ -8,6 +8,7 @@ PACKAGES=(
     micro
     starship
     direnv
+    zoxide
 )
 
 if [[ "$OSTYPE" == "darwin"* ]] ; then

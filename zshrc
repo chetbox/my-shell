@@ -104,7 +104,9 @@ alias zshconfig="micro ~/.zshrc"
 alias ohmyzsh="micro ~/.oh-my-zsh"
 
 source ~/.profile
-source ~/.z.sh
+
+# zoxide / z
+eval "$(zoxide init zsh)"
 
 # direnv
 eval "$(direnv hook zsh)"
