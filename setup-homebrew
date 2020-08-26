@@ -9,6 +9,7 @@ PACKAGES=(
     starship
     direnv
     zoxide
+    fzf
 )
 
 if [[ "$OSTYPE" == "darwin"* ]] ; then
