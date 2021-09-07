@@ -4,6 +4,9 @@ alias grep="grep --color=auto"
 # exa instead of ls
 alias ls=exa
 
+# Mac-style open
+alias open=xdg-open
+
 # Default editor
 export EDITOR=micro
 
