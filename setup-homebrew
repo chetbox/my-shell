@@ -10,6 +10,7 @@ PACKAGES=(
     direnv
     zoxide
     fzf
+    git-delta
 )
 
 if [[ "$OSTYPE" == "darwin"* ]] ; then
