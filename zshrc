@@ -105,6 +105,9 @@ alias ohmyzsh="micro ~/.oh-my-zsh"
 
 source ~/.profile
 
+# atuin shell history
+eval "$(atuin init zsh)"
+
 # zoxide / z
 eval "$(zoxide init zsh)"
 

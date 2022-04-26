@@ -11,6 +11,7 @@ PACKAGES=(
     zoxide
     fzf
     git-delta
+    atuin
 )
 
 if [[ "$OSTYPE" == "darwin"* ]] ; then
