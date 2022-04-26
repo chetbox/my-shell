@@ -105,8 +105,10 @@ alias ohmyzsh="micro ~/.oh-my-zsh"
 
 source ~/.profile
 
-# atuin shell history
+# atuin shell history on Ctrl+R
+export ATUIN_NOBIND="true"
 eval "$(atuin init zsh)"
+bindkey '^r' _atuin_search_widget
 
 # zoxide / z
 eval "$(zoxide init zsh)"
