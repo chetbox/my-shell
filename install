@@ -23,6 +23,7 @@ echo "Installing symlinks"
 "$CURRENT_DIR/install-symlink" "$CURRENT_DIR/profile" "$HOME/.profile" | sed 's/^/  /'
 "$CURRENT_DIR/install-symlink" "$CURRENT_DIR/zshrc" "$HOME/.zshrc" | sed 's/^/  /'
 "$CURRENT_DIR/install-symlink" "$CURRENT_DIR/gitconfig" "$HOME/.gitconfig" | sed 's/^/  /'
+"$CURRENT_DIR/install-symlink" "$CURRENT_DIR/atuin" "$HOME/.config/atuin/config.toml"
 
 echo "Done."
 

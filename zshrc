@@ -9,7 +9,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 DEFAULT_USER="$USER"
-eval $(starship init zsh)
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -116,4 +115,12 @@ eval "$(zoxide init zsh)"
 # direnv
 eval "$(direnv hook zsh)"
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+# starship
+eval "$(starship init zsh)"
+
+autoload -Uz compinit && compinit
+
+# Node 16
+export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
+export LDFLAGS="$LDFLAGS -L/opt/homebrew/opt/node@16/lib"
+export CPPFLAGS="$CPPFLAGS -I/opt/homebrew/opt/node@16/include"

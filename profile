@@ -4,9 +4,6 @@ alias grep="grep --color=auto"
 # exa instead of ls
 alias ls=exa
 
-# Mac-style open
-alias open=xdg-open
-
 # Default editor
 export EDITOR=micro
 
@@ -20,8 +17,8 @@ HISTCONTROL="erasedups:ignoreboth"
 HISTTIMEFORMAT='%F %T '
 
 # Android SDK
-ANDROID_HOME="$HOME/Library/Android/sdk"
-PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
+# ANDROID_HOME="$HOME/Library/Android/sdk"
+# PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
 
 # nvm
 #export NVM_DIR="$HOME/.nvm"
@@ -29,10 +26,10 @@ PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
 # [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 
 # go
-export PATH=$PATH:~/go/bin
+# export PATH=$PATH:~/go/bin
 
 # MySQL
-export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+# export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 
 # Rust
 export PATH=$PATH:~/.cargo/bin
