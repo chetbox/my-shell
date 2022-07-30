@@ -12,4 +12,5 @@ if [ -e "$TARGET_FILE" ] || [ -L "$TARGET_FILE" ] ; then
 fi
 
 echo "$SRC_FILE -> $TARGET_FILE"
+mkdir -p "$(dirname $TARGET_FILE)"
 ln -s "$SRC_FILE" "$TARGET_FILE"
