@@ -124,3 +124,10 @@ autoload -Uz compinit && compinit
 export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 export LDFLAGS="$LDFLAGS -L/opt/homebrew/opt/node@16/lib"
 export CPPFLAGS="$CPPFLAGS -I/opt/homebrew/opt/node@16/include"
+
+# bun completions
+[ -s "/Users/chetan/.bun/_bun" ] && source "/Users/chetan/.bun/_bun"
+
+# Bun
+export BUN_INSTALL="/Users/chetan/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

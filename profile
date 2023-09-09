@@ -1,8 +1,11 @@
 # Colour grep
 alias grep="grep --color=auto"
 
-# exa instead of ls
-alias ls=exa
+# eza instead of ls
+alias ls=eza
+
+alias y="yarn"
+alias ys="yarn start"
 
 # Default editor
 export EDITOR=micro
@@ -17,8 +20,8 @@ HISTCONTROL="erasedups:ignoreboth"
 HISTTIMEFORMAT='%F %T '
 
 # Android SDK
-# ANDROID_HOME="$HOME/Library/Android/sdk"
-# PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
+ANDROID_HOME="$HOME/Library/Android/sdk"
+PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
 
 # nvm
 #export NVM_DIR="$HOME/.nvm"
@@ -36,7 +39,7 @@ export PATH=$PATH:~/.cargo/bin
 
 if [ -x "$(which termux-info)" ] ; then
   # Run SSH agent for key managment
-  eval $(ssh-agent)
+  eval "$(ssh-agent)"
 
   # Start SSH server
   sshd
